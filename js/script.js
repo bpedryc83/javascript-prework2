@@ -1,3 +1,5 @@
+// script for computerMove
+
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
@@ -16,6 +18,8 @@ else if (randomNumber == 3){
 
 printMessage('Ruch komputera to: ' + computerMove);
 
+// script for playerMove
+
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
@@ -33,3 +37,24 @@ else if (playerInput == '3'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+// script for displaying the result of the game
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+    printMessage('Ty wygrywasz!');
+  }
+else if (computerMove == 'papier' && playerMove == 'nożyce'){
+    printMessage('Ty wygrywasz');
+}
+else if (computerMove == 'nożyce' && playerMove == "kamień"){
+    printMessage('Ty wygrywasz');    
+}
+else if (computerMove == playerMove){
+    printMessage('Jest remis');    
+}
+else if (playerMove == 'nieznany ruch'){
+    printMessage('Nie wybrałeś poprawnej opcji, czyli od 1 do 3')
+}
+else{
+    printMessage('Przegrałeś');
+}
