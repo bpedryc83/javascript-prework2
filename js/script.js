@@ -29,7 +29,7 @@ function playGame(playerInput){
             playerResult = playerResult + 1;    
         }
         else if (argComputerMove == argPlayerMove){
-            printMessage('Jest remis');    
+            printMessage('Jest <b>remis</b>');    
         }
         else if (argPlayerMove == 'nieznany ruch'){
             printMessage('Nie wybrałeś poprawnej opcji, czyli od 1 do 3')
