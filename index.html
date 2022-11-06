@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Kamień, papier, nożyce</title>
 	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<div class="container">
-		<div id="buttons">
-			<button id="play-rock">Kamień</button>
-			<button id="play-paper">Papier</button>
-			<button id="play-scissors">Nożyce</button>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<title>Zagrajmy w papier, kamień, nożyczki</title>   
+	<head>
+		<meta charset="UTF-8">
+		<title>Kamień, papier, nożyce</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="top-line">
+				Zagrajmy w Kamień, Papier i Nożyce
+			</div>
+			<div class="image-area pos-relative">
+				<img src="https://images.pexels.com/photos/51415/pexels-photo-51415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+				<div class="central_part">
+					<div class="left-column">
+						<h3>STATYSTYKI:</h3><br><br>
+						<div id="messages" class="stats"></div><br><br>
+						<h3>WYNIKI:</h3><br>
+						<span class="small-text">Ty - Komputer</span>
+						<div id="result"></div>
+					</div>
+					<div id="buttons" class="right-column">
+						<img src="images/fingers.png" class="img-fingers">
+						<div class="flex-line">
+							<button id="play-rock" class="btn">Kamień</button>
+							<button id="play-paper" class="btn">Papier</button>
+							<button id="play-scissors" class="btn">Nożyce</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="messages"></div>
-	</div>
-	<script src="js/functions.js"></script>
-	<script src="js/script.js"></script>
-</body>
+		<script src="js/functions.js"></script>
+		<script src="js/script.js"></script>
+	</body>
 </html>

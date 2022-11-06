@@ -1,3 +1,6 @@
+let playerResult = 0;
+let computerResult = 0;
+
 function playGame(playerInput){
     clearMessages();    
     
@@ -22,7 +25,8 @@ function playGame(playerInput){
         if((argComputerMove == 'kamień' && argPlayerMove == 'papier') 
         || (argComputerMove == 'papier' && argPlayerMove == 'nożyce')
         || (argComputerMove == 'nożyce' && argPlayerMove == "kamień")){
-            printMessage('Ty wygrywasz');    
+            printMessage('Ty wygrywasz');
+            playerResult = playerResult + 1;    
         }
         else if (argComputerMove == argPlayerMove){
             printMessage('Jest remis');    
@@ -32,6 +36,7 @@ function playGame(playerInput){
         }
         else{
             printMessage('Przegrałeś');
+            computerResult = computerResult + 1;
         }
     }
 
@@ -48,6 +53,8 @@ function playGame(playerInput){
 
     displayResult(computerMove, playerMove);
     console.log('argMoveID w funkcji getMoveName przyjęło dla Ciebie wartość: ',playerInput);
+
+    printEndResult(playerResult + ' - ' + computerResult);
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){
