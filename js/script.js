@@ -29,10 +29,7 @@ function playGame(playerInput){
             playerResult = playerResult + 1;    
         }
         else if (argComputerMove == argPlayerMove){
-            printMessage('Jest <b>remis</b>');    
-        }
-        else if (argPlayerMove == 'nieznany ruch'){
-            printMessage('Nie wybrałeś poprawnej opcji, czyli od 1 do 3')
+            printMessage('Jest remis');    
         }
         else{
             printMessage('Przegrałeś');
@@ -44,12 +41,12 @@ function playGame(playerInput){
     let computerMove = getMoveName(randomNumber);
 
     console.log('Wylosowana liczba to: ' + randomNumber);
-    printMessage('Ruch komputera to: ' + computerMove);
+    printMessage('<span style="color:red; font-weight:bold;">Ruch komputera to: ' + computerMove + '</span>');
 
     /* let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.'); */
     let playerMove = getMoveName(playerInput);
     console.log('Gracz wpisał: ' + playerInput);
-    printMessage('Twój ruch to: ' + playerMove);
+    printMessage('<span style="color:green; font-weight:bold;">Twój ruch to: ' + playerMove + '</span>');
 
     displayResult(computerMove, playerMove);
     console.log('argMoveID w funkcji getMoveName przyjęło dla Ciebie wartość: ',playerInput);

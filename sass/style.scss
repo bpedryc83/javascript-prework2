@@ -95,3 +95,31 @@ h3 {
     margin: 0;
     padding: 0;
 }
+
+@media (max-width: 500px){
+    body {
+        font-size: 10px;
+    }
+    .top-line {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 10px;
+    }
+    span {
+        font-size: 10px;
+    }
+    .image-area {
+        min-height:auto;
+        img {
+            opacity: 20%;
+    }
+    .left-column{
+        flex: 1;
+    }
+    .right-column{
+        flex:1;
+        flex-wrap: wrap;
+    }
+}
+}
